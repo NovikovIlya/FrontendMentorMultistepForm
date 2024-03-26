@@ -1,13 +1,12 @@
-import { Route, Routes } from 'react-router-dom';
-import Layout from './pages/Layout';
-import Plan from './pages/Plan';
+
+import CardComponent from '../../components/CardComponent/CardComponent';
 
 function Addons() {
 
 
   return (
     <>
-      
+      <CardComponent />
     </>
   )
 }
