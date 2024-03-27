@@ -10,6 +10,7 @@ const BottomComponent = () => {
       {pathname === '/' && <Link className={styles.link} to='/plan'>Next Step</Link>}
       {pathname === '/plan' && <Link className={styles.link} to='/addons'>Next Step</Link>}
       {pathname === '/addons' && <Link className={styles.link} to='/summary'>Next Step</Link>}
+      {pathname === '/summary' && <Link to='/thanks' className={styles.link} >Confirm</Link>}
     </div>
   );
 };

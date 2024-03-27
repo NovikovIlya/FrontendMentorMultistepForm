@@ -10,7 +10,13 @@
     color: white;
     background-color: #F55A5A;
     padding: 10px 20px;
-    border-radius: 5px
+    border-radius: 5px;
+    width: 80px;
+
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .link:hover{
     background-color: #b91c1c
@@ -23,6 +29,8 @@
     border-radius: 5px;
     border: none;
     cursor: pointer;
+    width: 80px;
+ 
 }
 .back:hover{
     background-color: #b91c1c
