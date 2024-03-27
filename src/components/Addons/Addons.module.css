@@ -1,0 +1,30 @@
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    
+    
+}
+.wrap{
+    display: flex;
+    gap:10px;
+}
+.active{
+    background-color: #EEF5FF;
+}
+.head{
+    font-weight: bold;
+}
+.block{
+    display: flex;
+   
+    flex-direction: column;
+ 
+}
+.inp{
+    cursor: pointer;
+}

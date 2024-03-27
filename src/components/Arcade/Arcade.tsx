@@ -1,18 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './Arcade.module.css'
 import arcade from '../../assets/icon-arcade.svg'
 import advanced from '../../assets/icon-advanced.svg'
 import pro from '../../assets/icon-pro.svg'
+import { Switch } from 'antd';
+import { useAppDispatch, useAppSelector } from '../../hooks/redux'
+import { changeIsYear } from '../../store/sliceUrl'
 
 const Arcade = () => {
+  // const [checked, setChecked] = useState(false);
+  const {isYear} = useAppSelector((state) => state.sliceUrl)
+  const dispatch= useAppDispatch()
   const handleCard = ()=>{
     
   }
+  const onChange = (checked: boolean) => {
+    console.log(`switch to ${checked}`);
+    dispatch(changeIsYear(checked))
+    // setChecked(checked);
+  };
 
   return (
     <div>
         <div className={styles.top}>
-            <div className={styles.card}>
+            <div className={`${styles.card} ${styles.acive}`}>
                 <img className={styles.icon} src={arcade}/>
 
                 <div>
@@ -37,7 +48,9 @@ const Arcade = () => {
                 </div>
             </div>
         </div>
-        <div className={styles.bot}></div>
+        <div className={styles.bot}>
+               <span>Monthly</span>  <Switch value={isYear} onChange={onChange} />  <span>Yearly</span>
+        </div>
     </div>
   )
 }

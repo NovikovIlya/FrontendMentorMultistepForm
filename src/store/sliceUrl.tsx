@@ -1,18 +1,27 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-  step: 1, 
+type InitialStateType = {
+  checked: any[];
+  isYear:boolean;
+}
+
+const initialState : InitialStateType = {
+  checked: [], 
+  isYear:false,
 };
 
 export const sliceData = createSlice({
   name: "sliceData",
   initialState,
   reducers: {
-    changeStep: (state, action) => {
-      state.step = action.payload;
+    changeChecked: (state, action) => {
+      state.checked = action.payload;
+    },
+    changeIsYear: (state, action) => {
+      state.isYear = action.payload;
     },
   },
 });
 
-export const { changeStep } = sliceData.actions;
+export const { changeChecked,changeIsYear } = sliceData.actions;
 export default sliceData.reducer;

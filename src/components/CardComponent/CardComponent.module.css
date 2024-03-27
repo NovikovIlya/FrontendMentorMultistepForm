@@ -5,6 +5,7 @@
     border-radius: 7px;
     padding: 10px;
     width: 80%;
+    max-width: 960px;
 }
 .left{
     background-image: url('../../assets/bg-sidebar-desktop.svg');
