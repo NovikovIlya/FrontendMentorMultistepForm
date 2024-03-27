@@ -1,12 +1,8 @@
-import React from "react";
 import styles from "./Left.module.css";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import BottomComponent from "../Bottom/BottomComponent";
-import { useAppSelector } from "../../hooks/redux";
+import { useLocation } from "react-router-dom";
 
 const LeftComponent = () => {
-  const {step:isStep} = useAppSelector((state)=>state.sliceUrl)
-  const navigate = useNavigate();
+ 
   const {pathname} = useLocation()
   console.log(pathname)
   return (

@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./TextComponent.module.css";
 import { useLocation } from "react-router-dom";
 

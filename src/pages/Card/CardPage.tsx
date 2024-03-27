@@ -1,10 +1,7 @@
-import React from 'react'
 import styles from './CardPage.module.css'
-import { Link, useNavigate } from 'react-router-dom'
 import BottomComponent from '../../components/Bottom/BottomComponent';
 
 const CardPage = ({isStep = 1}) => {
-  const navigate = useNavigate();
   return (
     <div className={styles.container}>
         <div className={styles.left}>
