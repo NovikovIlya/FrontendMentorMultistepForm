@@ -10,27 +10,33 @@ const Summary = () => {
 
   return (
     <>
-      <div className={styles.container}>
-        <div className={styles.plan}>
-          <div>
-            {plan.namePlan} ({isYear ? "Yearly" : "Monthly"})
-          </div>
-          <div>{plan.price * (isYear ? 10 : 1)}</div>
-        </div>
-        <div>
-          <div>
-            {checked.map((v: any) => (
-              <div className={styles.addons} key={v.name}>
-                <div>{v.name}</div> <div>{v.price * (isYear ? 10 : 1)}</div>
+      {plan.namePlan && checked.length > 0 ? (
+        <>
+          <div className={styles.container}>
+            <div className={styles.plan}>
+              <div>
+                {plan.namePlan} ({isYear ? "Yearly" : "Monthly"})
               </div>
-            ))}
+              <div>{plan.price * (isYear ? 10 : 1)}</div>
+            </div>
+            <div>
+              <div>
+                {checked.map((v: any) => (
+                  <div className={styles.addons} key={v.name}>
+                    <div>{v.name}</div> <div>{v.price * (isYear ? 10 : 1)}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div className={styles.total}>
-        <div>Total ({isYear ? "Year" : "Month"})</div>
-        <div>{sumTotal * (isYear ? 10 : 1)}</div>
-      </div>
+          <div className={styles.total}>
+            <div>Total ({isYear ? "Year" : "Month"})</div>
+            <div>{sumTotal * (isYear ? 10 : 1)}</div>
+          </div>
+        </>
+      ) : (
+        <>You need to select a plan and add-ons</>
+      )}
     </>
   );
 };

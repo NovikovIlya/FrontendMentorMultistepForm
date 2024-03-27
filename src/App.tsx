@@ -5,6 +5,7 @@ import Addons from './pages/Addons/Addons';
 import Plan from './pages/Plan/Plan';
 import Summary from './pages/Summary/Summary';
 import Info from './pages/Info/Info';
+import Thanks from './pages/Thanks/Thanks';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="plan" element={<Plan />}></Route>
           <Route path="addons" element={<Addons />}></Route>
           <Route path="summary" element={<Summary />}></Route>
+          <Route path="thanks" element={<Thanks />}></Route>
           <Route path="*" element={<>Нет такого</>} />
         </Route>
       </Routes>
