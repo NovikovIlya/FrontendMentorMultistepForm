@@ -3,7 +3,6 @@ import { useAppSelector } from "../../hooks/redux";
 
 const Summary = () => {
   const { isYear, plan, checked } = useAppSelector((state) => state.sliceUrl);
-  console.log("vvv", checked);
   const sumAddons = checked.reduce((acc: any, v: any) => acc + v.price, 0);
   const sumPlan = plan.price;
   const sumTotal = sumAddons + sumPlan;
@@ -35,7 +34,7 @@ const Summary = () => {
           </div>
         </>
       ) : (
-        <>You need to select a plan and add-ons</>
+        <>You need to select a plan and add-ons (and add info)</>
       )}
     </>
   );
