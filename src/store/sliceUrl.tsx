@@ -1,13 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 type InitialStateType = {
-  checked: any[];
+  checked: any;
   isYear:boolean;
+  plan: any,
 }
 
 const initialState : InitialStateType = {
   checked: [], 
   isYear:false,
+  plan: {namePlan:'',price:1},
 };
 
 export const sliceData = createSlice({
@@ -20,8 +22,12 @@ export const sliceData = createSlice({
     changeIsYear: (state, action) => {
       state.isYear = action.payload;
     },
+    changePlan: (state, action) => {
+      console.log('z',action.payload)
+      state.plan = action.payload
+    },
   },
 });
 
-export const { changeChecked,changeIsYear } = sliceData.actions;
+export const { changeChecked,changeIsYear,changePlan } = sliceData.actions;
 export default sliceData.reducer;
