@@ -1,0 +1,13 @@
+.wrap{
+    margin-bottom: 20px;
+}
+.inp{
+    padding: 5px;
+    margin-top: 10px;
+    width: 100%;
+    height: 30px;
+    border:1px solid rgba(128, 128, 128, 0.5)
+}
+.lab{
+    color:#65738B
+}

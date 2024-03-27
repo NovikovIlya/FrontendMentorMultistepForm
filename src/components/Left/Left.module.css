@@ -7,10 +7,12 @@
 }
 .left{
     background-image: url('../../assets/bg-sidebar-desktop.svg');
-    padding: 10px;
+    padding: 30px;
     gap: 40px;
     display: flex;
     flex-direction: column;
+    height: 500px;
+
 }
 .leftHead{
     display: flex;

@@ -1,41 +1,28 @@
 import { useLocation } from "react-router-dom";
+import Form from "../Form/Form";
+import styles from './Body.module.css'
+import Arcade from "../Arcade/Arcade";
+import Addons from "../Addons/Addons";
+import Summary from "../Summary/Summary";
 
 const Body = () => {
   const { pathname } = useLocation();
   return (
-    <div>
+    <div className={styles.ss}>
       {pathname === "/" && (
-        <>
-          <div>
-            <label htmlFor="my">Name</label>
-            <br></br>
-            <input type="text" id="my" />
-          </div>
-
-          <div>
-            <label htmlFor="mail">Email</label>
-            <br></br>
-            <input type="text" id="mail" />
-          </div>
-
-          <div>
-            <label htmlFor="phone">Phone</label>
-            <br></br>
-            <input type="text" id="phone" />
-          </div>
-        </>
+        <Form />
       )}
       {pathname=== '/plan' &&
       <>
-        Arcade
+        <Arcade/>
       </>}
       {pathname=== '/addons' &&
       <>
-        Addons
+        <Addons/>
       </>}
       {pathname=== '/summary' &&
       <>
-        Summary
+        <Summary/>
       </>}
     </div>
   );

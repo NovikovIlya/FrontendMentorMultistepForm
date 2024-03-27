@@ -1,0 +1,29 @@
+.btnSelf{
+    /* margin-top: 100px; */
+    display: flex;
+    align-self: end;
+    justify-content: space-between;
+    width: 100%;
+}
+.link{
+    text-decoration: none;
+    color: white;
+    background-color: #F55A5A;
+    padding: 10px 20px;
+    border-radius: 5px
+}
+.link:hover{
+    background-color: #b91c1c
+}
+.back{
+    text-decoration: none;
+    color: white;
+    background-color: #F55A5A;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.back:hover{
+    background-color: #b91c1c
+}

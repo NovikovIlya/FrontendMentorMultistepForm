@@ -1,4 +1,3 @@
-import React from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import styles from './BottomComponent.module.css'
 
@@ -6,11 +5,11 @@ const BottomComponent = () => {
   const navigate = useNavigate();
   const {pathname} = useLocation()
   return (
-    <div>
-      {pathname !== '/' && <button onClick={() => navigate(-1)}>Back</button>}
-      {pathname === '/' && <Link to='/plan'>Go</Link>}
-      {pathname === '/plan' && <Link to='/addons'>Go</Link>}
-      {pathname === '/addons' && <Link to='/summary'>Go</Link>}
+    <div className={styles.btnSelf}>
+      {pathname !== '/' && <button className={styles.back} onClick={() => navigate(-1)}>Back</button>}
+      {pathname === '/' && <Link className={styles.link} to='/plan'>Next Step</Link>}
+      {pathname === '/plan' && <Link className={styles.link} to='/addons'>Next Step</Link>}
+      {pathname === '/addons' && <Link className={styles.link} to='/summary'>Next Step</Link>}
     </div>
   );
 };

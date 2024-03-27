@@ -11,8 +11,10 @@ const CardComponent = () => {
       <LeftComponent />
 
       <div className={styles.right}>
-        <TextComponent />
-        <Body />
+        <div>
+          <TextComponent />
+          <Body />
+        </div>
         <BottomComponent />
       </div>
     </div>
